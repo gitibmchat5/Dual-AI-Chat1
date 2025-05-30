@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dual AI Chat</title>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom scrollbar for webkit browsers */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    body {
+      font-family: 'Inter', sans-serif; /* A common sans-serif font often used with Tailwind */
+    }
+    /* Basic styles for Markdown preview in Notepad */
+    .markdown-preview {
+      padding: 0.75rem; /* Corresponds to p-3 in Tailwind */
+      color: #d1d5db; /* text-gray-300 */
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* font-mono */
+      font-size: 0.875rem; /* text-sm */
+      line-height: 1.625; /* leading-relaxed */
+      background-color: #1f2937; /* bg-slate-800 or similar dark bg */
+      height: 100%;
+      overflow-y: auto;
+    }
+    .markdown-preview h1,
+    .markdown-preview h2,
+    .markdown-preview h3,
+    .markdown-preview h4,
+    .markdown-preview h5,
+    .markdown-preview h6 {
+      color: #93c5fd; /* A lighter blue for headings */
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+      font-weight: 600;
+    }
+    .markdown-preview h1 { font-size: 1.875em; }
+    .markdown-preview h2 { font-size: 1.5em; }
+    .markdown-preview h3 { font-size: 1.25em; }
+    .markdown-preview p {
+      margin-bottom: 0.75em;
+    }
+    .markdown-preview ul,
+    .markdown-preview ol {
+      margin-left: 1.5em;
+      margin-bottom: 0.75em;
+      list-style-position: outside;
+    }
+    .markdown-preview ul { list-style-type: disc; }
+    .markdown-preview ol { list-style-type: decimal; }
+    .markdown-preview li { margin-bottom: 0.25em; }
+    .markdown-preview blockquote {
+      border-left: 4px solid #6b7280; /* border-gray-500 */
+      padding-left: 1em;
+      margin-left: 0;
+      margin-bottom: 0.75em;
+      color: #9ca3af; /* text-gray-400 */
+      font-style: italic;
+    }
+    .markdown-preview pre {
+      background-color: #374151; /* bg-gray-700 */
+      padding: 0.75em;
+      border-radius: 0.375rem; /* rounded-md */
+      overflow-x: auto;
+      margin-bottom: 0.75em;
+      color: #e5e7eb; /* text-gray-200 */
+    }
+    .markdown-preview code {
+      background-color: #4b5563; /* bg-gray-600 */
+      padding: 0.2em 0.4em;
+      border-radius: 0.25rem;
+      font-size: 0.9em;
+    }
+    .markdown-preview pre code {
+      background-color: transparent;
+      padding: 0;
+      font-size: 1em;
+    }
+    .markdown-preview a {
+      color: #60a5fa; /* text-blue-400 */
+      text-decoration: underline;
+    }
+    .markdown-preview hr {
+      border-top: 1px solid #4b5563; /* border-gray-600 */
+      margin: 1em 0;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.0.1",
+    "lucide-react": "https://esm.sh/lucide-react@^0.511.0",
+    "marked": "https://esm.sh/marked@^13.0.2",
+    "dompurify": "https://esm.sh/dompurify@^3.1.6"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-900 text-white">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html><link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>
